@@ -7,7 +7,8 @@ function User ({isLoggedIn, name, surname, age, friends}) {
     </h1>;
 
     {
-        friends.map((friend)=> <div>{friend}</div>)
+        friends.map((friend)=> (
+        <div key ={friend.id}>{friend.name}</div>))
     }
     
     </>
