@@ -24,7 +24,9 @@ function App() {
     surname ='Yılmaz'
     isLoggedIn = {true} 
     age = {29} 
-    friends = {friends} />
+    friends = {friends}
+    adress = {{title:'İstanbul', zip:34000}}
+    />
     
   </>
    
