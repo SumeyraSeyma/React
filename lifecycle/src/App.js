@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+/* import { useEffect, useState } from 'react'; */
+import Counter from './components/counter';
+import {useState} from 'react';
 
 
 function App() {
-  const[number,setNumber] = useState(0);
+  const [isVisible,setIsVisible] = useState(true);
+/*   const[number,setNumber] = useState(0);
   const [name,setName] = useState('Mehmet');
 
   useEffect(()=>{//component ilk kez render edildiğinde çalışır
@@ -15,22 +18,30 @@ function App() {
 
   useEffect(()=>{//state her güncellendiğinde çalışır
     console.log('Name state güncellendi');
-  },[name]);
+  },[name]); */
 
 
 
 
   return (
     <div className="App">
-      <h1>{number}</h1>
-      <button onClick={()=>setNumber(number+1)}>Click</button>
-      
-      <hr/>
+      {isVisible && <Counter/>}
+      <br/>
+    {/* <h1>{number}</h1>
+    <button onClick={()=>setNumber(number+1)}>Click</button>
+    
+    <hr/>
 
-      <h1>{name}</h1>
-      <button onClick={()=>setName('Ahmet')}>Change Name</button>
+    <h1>{name}</h1>
+    <button onClick={()=>setName('Ahmet')}>Change Name</button> */}
 
-    </div>
+
+      <button onClick={()=>setIsVisible(!isVisible)}>Toggle</button>
+    </div> 
+  
+    
+
+
   );
 }
 
